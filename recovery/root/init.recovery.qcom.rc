@@ -85,3 +85,12 @@ on property:ro.crypto.state=unencrypted
 on property:twrp.decrypt.done=true
     stop hal_cryptoeng_oppo
     setprop ro.separate.soft ${ro.boot.prjname}
+
+on property:ro.crypto.state=encrypted
+    stop qseecomd
+    start qseecomd
+
+service qseecomd /sbin/qseecomd
+    user root
+    group root
+    seclabel u:r:recovery:s0
