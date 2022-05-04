@@ -1,6 +1,5 @@
  # OrangeFox device tree
 
- <link rel="stylesheet" href="1.css">
 
 <b>Clone Command</b> :
 
